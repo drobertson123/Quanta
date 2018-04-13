@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.10.13" />
+    <PackageReference Include="BenchmarkDotNet.Core" Version="0.10.13" />
+    <PackageReference Include="NodaTime" Version="2.2.5" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.0-preview1-26216-02" />
+    <PackageReference Include="xunit" Version="2.4.0-beta.1.build3958" />
+    <PackageReference Include="xunit.abstractions" Version="2.0.1" />
+    <PackageReference Include="xunit.core" Version="2.4.0-beta.1.build3958" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Quanta\Quanta.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Benchmarks\" />
+  </ItemGroup>
+
+</Project>
